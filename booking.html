@@ -155,6 +155,8 @@
     <script>
         document.getElementById("bookingForm").addEventListener("submit", function(event) {
             event.preventDefault();
+
+            // Lấy dữ liệu từ biểu mẫu
             let fullName = document.getElementById("fullName").value;
             let email = document.getElementById("email").value;
             let phone = document.getElementById("phone").value;
@@ -162,10 +164,39 @@
             let date = document.getElementById("date").value;
             let time = document.getElementById("time").value;
 
-            let googleFormUrl = "https://docs.google.com/forms/d/e/FORM_ID/formResponse";
-            let queryParams = `?entry.123456789=${fullName}&entry.987654321=${phone}&entry.1112131415=${date}&entry.1617181920=${time}&entry.2021222324=${email}&entry.2526272829=${service}`;
+            // Tạo đối tượng dữ liệu để gửi đến webhook
+            let data = {
+                fullName: fullName,
+                email: email,
+                phone: phone,
+                service: service,
+                date: date,
+                time: time
+            };
 
-            window.location.href = googleFormUrl + queryParams;
+            // URL webhook của n8n (thay thế bằng URL thực tế của bạn)
+            let webhookUrl = "https://your-n8n-webhook-url.com";
+
+            // Gửi dữ liệu đến webhook bằng fetch
+            fetch(webhookUrl, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert("Đặt lịch hẹn thành công! Chúng tôi sẽ liên hệ với bạn sớm.");
+                    document.getElementById("bookingForm").reset(); // Xóa biểu mẫu
+                } else {
+                    alert("Có lỗi xảy ra. Vui lòng thử lại sau.");
+                }
+            })
+            .catch(error => {
+                console.error("Lỗi:", error);
+                alert("Có lỗi xảy ra. Vui lòng thử lại sau.");
+            });
         });
     </script>
 </body>
