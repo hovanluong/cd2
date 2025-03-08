@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giá Dịch Vụ | Salon HTL</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .service-card {
+            border-radius: 10px;
+            transition: transform 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        .price-tag {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #dc3545;
+        }
+        .category-title {
+            border-bottom: 2px solid #dee2e6;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+            position: relative;
+        }
+        .category-title::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 80px;
+            height: 2px;
+            background-color: #dc3545;
+        }
+        .hero-banner {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/salon.jpg');
+            color: white;
+            padding: 60px 0;
+            margin-bottom: 40px;
+            background-size: cover;
+            background-position: center;
+        }
+        .discount-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #dc3545;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .package-deal {
+            background-color: #f8f9fa;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin-top: 40px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-cut me-2"></i>Salon HTL</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Giới thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Giá dịch vụ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="booking.html">Đặt lịch hẹn</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero-banner">
+        <div class="container text-center">
+            <h1>Bảng Giá Dịch Vụ</h1>
+            <p class="lead">Trải nghiệm dịch vụ chất lượng cao với giá cả hợp lý</p>
+        </div>
+    </div>
+
+    <div class="container py-5">
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-8 text-center">
+                <p>Tại Salon Cắt Tóc, chúng tôi tự hào cung cấp dịch vụ chất lượng cao với chi phí hợp lý. Bảng giá bên dưới áp dụng từ 01/03/2025. Khách hàng thành viên sẽ được hưởng thêm ưu đãi 10% cho mọi dịch vụ.</p>
+            </div>
+        </div>
+
+        <h3 class="category-title">Dịch Vụ Cắt Tóc</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card service-card position-relative">
+                    <div class="card-body">
+                        <h5 class="card-title">Cắt Tóc Nam Cơ Bản</h5>
+                        <p class="card-text">Cắt, tạo kiểu, gội đầu và massage đầu nhẹ nhàng.</p>
+                        <p class="price-tag">100,000 VNĐ</p>
+                        <p class="text-muted">Thời gian: 30 phút</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card service-card position-relative">
+                    <div class="card-body">
+                        <h5 class="card-title">Cắt Tóc Nam Premium</h5>
+                        <p class="card-text">Tư vấn kiểu tóc, cắt, tạo kiểu, gội đầu, massage đầu và tinh dầu dưỡng.</p>
+                        <p class="price-tag">180,000 VNĐ</p>
+                        <p class="text-muted">Thời gian: 45 phút</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card service-card position-relative">
+                    <div class="discount-badge">-15%</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Cắt Tóc VIP</h5>
+                        <p class="card-text">Dịch vụ trọn gói bởi stylist cấp cao, bao gồm tư vấn, cắt, tạo kiểu, gội, massage và kem dưỡng cao cấp.</p>
+                        <p class="price-tag">250,000 VNĐ</p>
+                        <p class="text-muted"><del>295,000 VNĐ</del> | Thời gian: 60 phút</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="category-title mt-5">Dịch Vụ Cho Nữ</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card service-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Cắt Tóc Nữ Cơ Bản</h5>
+                        <p class="card-text">Cắt tóc, tạo kiểu đơn giản, gội đầu và dầu dưỡng.</p>
+                        <p class="price-tag">150,000 VNĐ</p>
+                        <p class="text-muted">Thời gian: 45 phút</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card service-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Cắt Tóc Nữ Premium</h5>
+                        <p class="card-text">Tư vấn kiểu tóc, cắt, tạo kiểu phức tạp, gội đầu, massage và tinh dầu dưỡng.</p>
+                        <p class="price-tag">250,000 VNĐ</p>
+                        <p class="text-muted">Thời gian: 60 phút</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card service-card position-relative">
+                    <div class="discount-badge">Mới</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Trọn Gói Làm Đẹp</h5>
+                        <p class="card-text">Cắt tóc, tạo kiểu, chăm sóc da mặt cơ bản và trang điểm nhẹ nhàng.</p>
+                        <p class="price-tag">450,000 VNĐ</p>
+                        <p class="text-muted">Thời gian: 120 phút</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="category-title mt-5">Dịch Vụ Màu & Tạo Kiểu</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card service-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Nhuộm Tóc Cơ Bản</h5>
+                        <p class="card-text">Nhuộm một màu đơn sắc với thuốc nhuộm chất lượng cao, bảo vệ tóc.</p>
+                        <p class="price-tag">300,000 VNĐ</p>
+                        <p class="text-muted">Thời gian: 90 phút</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card service-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Nhuộm Highlight</h5>
+                        <p class="card-text">Nhuộm highlight với 2-3 tông màu, tạo hiệu ứng sáng tối đẹp mắt.</p>
+                        <p class="price-tag">500,000 VNĐ</p>
+                        <p class="text-muted">Thời gian: 120 phút</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card service-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Uốn Tóc</h5>
+                        <p class="card-text">Uốn tóc với công nghệ và sản phẩm cao cấp, an toàn cho tóc.</p>
+                        <p class="price-tag">400,000 VNĐ - 700,000 VNĐ</p>
+                        <p class="text-muted">Tùy độ dài và độ phức tạp</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="package-deal mt-5">
+            <h4>Gói Ưu Đãi Đặc Biệt</h4>
+            <p>Đặt lịch 3 dịch vụ trở lên và nhận giảm giá 20% trên tổng hóa đơn. Áp dụng cho khách hàng mới và khách hàng thành viên.</p>
+            <a href="#" class="btn btn-success">Đặt Lịch Ngay</a>
+        </div>
+
+        <div class="mt-5">
+            <h3 class="category-title">Thông Tin Thêm</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Giờ Làm Việc</h5>
+                    <ul class="list-unstyled">
+                        <li>Thứ Hai - Thứ Sáu: 9:00 - 20:00</li>
+                        <li>Thứ Bảy - Chủ Nhật: 8:00 - 22:00</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">  
+                    <h5>Chính Sách Đặt Lịch</h5>
+                    <ul>
+                        <li>Vui lòng đến trước 10 phút so với giờ hẹn</li>
+                        <li>Đặt lịch trước để được phục vụ tốt nhất</li>
+                        <li>Hủy lịch vui lòng báo trước 4 giờ</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5>Salon HTL</h5>
+                    <p>Mang đến cho bạn vẻ đẹp và sự tự tin mỗi ngày</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Liên Hệ</h5>
+                    <p>123 Đường Trần Đại Nghĩa, Phường Hòa Quý, Quận Ngũ Hành Sơn, TP Đà Nẵng<br>
+                    ĐT: 0123 456 789<br>
+                    Email: huyteo1003@gmail.comcom</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Giờ Mở Cửa</h5>
+                    <p>Thứ 2 - Chủ Nhật<br>
+                    8:00 - 22:00</p>
+                </div>
+            </div>
+            <div class="text-center pt-3 border-top border-secondary">
+                <p>&copy; 2025 Salon Cắt Tóc. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

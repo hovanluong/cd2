@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt Lịch Hẹn - Salon HTL</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .navbar {
+            box-shadow: 0 2px 4px rgba(0,0,0,.1);
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .booking-container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,.1);
+            padding: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .form-control, .form-select {
+            border-radius: 8px;
+            border: 2px solid #e9ecef;
+            padding: 0.75rem;
+            transition: all 0.3s;
+        }
+
+        .form-control:focus, .form-select:focus {
+            border-color: #80bdff;
+            box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+        }
+
+        .btn-submit {
+            background: linear-gradient(to right, #2ecc71, #27ae60);
+            border: none;
+            border-radius: 8px;
+            padding: 12px 30px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
+        }
+
+        .service-icon {
+            margin-right: 8px;
+        }
+
+        footer {
+            background: linear-gradient(to right, #2c3e50, #3498db);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-cut me-2"></i>Salon HTL
+            </a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="booking-container">
+            <h2 class="text-center mb-4">
+                <i class="fas fa-calendar-alt me-2"></i>
+                Đặt Lịch Hẹn
+            </h2>
+            <form id="bookingForm" class="mx-auto" style="max-width: 600px;">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="fullName" class="form-label">
+                            <i class="fas fa-user service-icon"></i>Họ tên
+                        </label>
+                        <input type="text" class="form-control" id="fullName" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="email" class="form-label">
+                            <i class="fas fa-envelope service-icon"></i>Email
+                        </label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="phone" class="form-label">
+                            <i class="fas fa-phone service-icon"></i>Số điện thoại
+                        </label>
+                        <input type="tel" class="form-control" id="phone" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="service" class="form-label">
+                            <i class="fas fa-scissors service-icon"></i>Dịch vụ
+                        </label>
+                        <select class="form-select" id="service" required>
+                            <option value="">Chọn dịch vụ</option>
+                            <option value="male">Cắt tóc nam</option>
+                            <option value="female">Cắt tóc nữ</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="date" class="form-label">
+                            <i class="fas fa-calendar service-icon"></i>Ngày đặt hẹn
+                        </label>
+                        <input type="date" class="form-control" id="date" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="time" class="form-label">
+                            <i class="fas fa-clock service-icon"></i>Thời gian hẹn
+                        </label>
+                        <input type="time" class="form-control" id="time" required>
+                    </div>
+                </div>
+
+                <div class="text-center mt-4">
+                    <button type="submit" class="btn btn-submit btn-lg text-white">
+                        <i class="fas fa-check-circle me-2"></i>Xác nhận đặt lịch
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="text-white text-center py-4">
+        <p class="mb-0">
+            <i class="fas fa-copyright me-2"></i>2025 Salon Cắt Tóc HTL. Tất cả các quyền được bảo lưu.
+        </p>
+    </footer>
+
+    <script>
+        document.getElementById("bookingForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let fullName = document.getElementById("fullName").value;
+            let email = document.getElementById("email").value;
+            let phone = document.getElementById("phone").value;
+            let service = document.getElementById("service").value;
+            let date = document.getElementById("date").value;
+            let time = document.getElementById("time").value;
+
+            let googleFormUrl = "https://docs.google.com/forms/d/e/FORM_ID/formResponse";
+            let queryParams = `?entry.123456789=${fullName}&entry.987654321=${phone}&entry.1112131415=${date}&entry.1617181920=${time}&entry.2021222324=${email}&entry.2526272829=${service}`;
+
+            window.location.href = googleFormUrl + queryParams;
+        });
+    </script>
+</body>
+</html>

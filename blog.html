@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Salon HTL</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        .blog-header {
+            background-color: #f8f9fa;
+            padding: 3rem 0;
+            margin-bottom: 2rem;
+        }
+        .blog-card {
+            transition: transform 0.3s;
+            margin-bottom: 2rem;
+            height: 100%;
+        }
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .blog-img {
+            height: 200px;
+            object-fit: cover;
+        }
+        .blog-tag {
+            font-size: 0.8rem;
+            color: #6c757d;
+        }
+        .popular-posts {
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+        }
+        .popular-post-item {
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #dee2e6;
+        }
+        .popular-post-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        .search-form {
+            margin-bottom: 2rem;
+        }
+        @media (max-width: 768px) {
+            .blog-img {
+                height: 180px;
+            }
+        }
+        .categories-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .categories-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #dee2e6;
+        }
+        .categories-list li:last-child {
+            border-bottom: none;
+        }
+        .blog-date {
+            font-size: 0.8rem;
+            color: #6c757d;
+        }
+        .navbar-nav .nav-link {
+            color: rgba(255,255,255,.75);
+            margin-right: 1rem;
+        }
+        .navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-cut me-2"></i>Salon HTL</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Giới thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Giá dịch vụ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="booking.html">Đặt lịch hẹn</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="blog-header">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold">Blog Salon HTL</h1>
+            <p class="lead">Cập nhật những xu hướng tóc mới nhất và mẹo chăm sóc tóc từ chuyên gia.</p>
+        </div>
+    </header>
+
+    <div class="container py-4">
+        <div class="row">
+            <div class="col-lg-8">
+                <!-- Tìm kiếm -->
+                <form class="search-form">
+                    <div class="input-group mb-4">
+                        <input type="text" class="form-control" placeholder="Tìm kiếm bài viết...">
+                        <button class="btn btn-dark" type="submit">Tìm kiếm</button>
+                    </div>
+                </form>
+
+                <!-- Danh sách bài viết -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card blog-card h-100">
+                            <div class="position-relative">
+                                <svg class="bd-placeholder-img card-img-top blog-img" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kiểu tóc nam" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                    <title>Kiểu tóc nam</title>
+                                    <rect width="100%" height="100%" fill="#868e96"/>
+                                    <text x="50%" y="50%" fill="#dee2e6" dominant-baseline="middle" text-anchor="middle">Kiểu tóc nam 2025</text>
+                                </svg>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="blog-tag"><i class="bi bi-tag"></i> Kiểu tóc nam</span>
+                                    <span class="blog-date"><i class="bi bi-calendar3"></i> 05/03/2025</span>
+                                </div>
+                                <h5 class="card-title">5 Kiểu tóc nam thịnh hành nhất 2025</h5>
+                                <p class="card-text">Khám phá những kiểu tóc nam được ưa chuộng nhất trong năm 2025, từ undercut hiện đại đến kiểu tóc dài lãng tử.</p>
+                                <a href="#" class="btn btn-outline-dark btn-sm">Đọc tiếp</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card blog-card h-100">
+                            <div class="position-relative">
+                                <svg class="bd-placeholder-img card-img-top blog-img" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Chăm sóc tóc" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                    <title>Chăm sóc tóc</title>
+                                    <rect width="100%" height="100%" fill="#20c997"/>
+                                    <text x="50%" y="50%" fill="#fff" dominant-baseline="middle" text-anchor="middle">Chăm sóc tóc tại nhà</text>
+                                </svg>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="blog-tag"><i class="bi bi-tag"></i> Chăm sóc tóc</span>
+                                    <span class="blog-date"><i class="bi bi-calendar3"></i> 28/02/2025</span>
+                                </div>
+                                <h5 class="card-title">Bí quyết chăm sóc tóc tại nhà hiệu quả</h5>
+                                <p class="card-text">Những phương pháp đơn giản giúp bạn duy trì mái tóc khỏe đẹp tại nhà không cần tốn kém chi phí đến salon.</p>
+                                <a href="#" class="btn btn-outline-dark btn-sm">Đọc tiếp</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-4">
+                        <div class="card blog-card h-100">
+                            <div class="position-relative">
+                                <svg class="bd-placeholder-img card-img-top blog-img" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Màu tóc" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                    <title>Màu tóc</title>
+                                    <rect width="100%" height="100%" fill="#fd7e14"/>
+                                    <text x="50%" y="50%" fill="#fff" dominant-baseline="middle" text-anchor="middle">Xu hướng màu tóc</text>
+                                </svg>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="blog-tag"><i class="bi bi-tag"></i> Màu tóc</span>
+                                    <span class="blog-date"><i class="bi bi-calendar3"></i> 15/02/2025</span>
+                                </div>
+                                <h5 class="card-title">Xu hướng màu tóc nổi bật mùa xuân 2025</h5>
+                                <p class="card-text">Những gam màu tóc đang thống trị xu hướng thời trang tóc mùa xuân năm nay từ các chuyên gia hàng đầu.</p>
+                                <a href="#" class="btn btn-outline-dark btn-sm">Đọc tiếp</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-4">
+                        <div class="card blog-card h-100">
+                            <div class="position-relative">
+                                <svg class="bd-placeholder-img card-img-top blog-img" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kiểu tóc nữ" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                    <title>Kiểu tóc nữ</title>
+                                    <rect width="100%" height="100%" fill="#e83e8c"/>
+                                    <text x="50%" y="50%" fill="#fff" dominant-baseline="middle" text-anchor="middle">Kiểu tóc nữ 2025</text>
+                                </svg>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="blog-tag"><i class="bi bi-tag"></i> Kiểu tóc nữ</span>
+                                    <span class="blog-date"><i class="bi bi-calendar3"></i> 10/02/2025</span>
+                                </div>
+                                <h5 class="card-title">7 Kiểu tóc nữ cá tính cho xuân 2025</h5>
+                                <p class="card-text">Những kiểu tóc giúp phái đẹp tỏa sáng trong mùa xuân với phong cách hiện đại và cá tính từ các nhà tạo mẫu hàng đầu.</p>
+                                <a href="#" class="btn btn-outline-dark btn-sm">Đọc tiếp</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-4">
+                        <div class="card blog-card h-100">
+                            <div class="position-relative">
+                                <svg class="bd-placeholder-img card-img-top blog-img" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sản phẩm" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                    <title>Sản phẩm</title>
+                                    <rect width="100%" height="100%" fill="#6f42c1"/>
+                                    <text x="50%" y="50%" fill="#fff" dominant-baseline="middle" text-anchor="middle">Sản phẩm chăm sóc tóc</text>
+                                </svg>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="blog-tag"><i class="bi bi-tag"></i> Sản phẩm</span>
+                                    <span class="blog-date"><i class="bi bi-calendar3"></i> 05/02/2025</span>
+                                </div>
+                                <h5 class="card-title">Top 10 sản phẩm dưỡng tóc được chuyên gia khuyên dùng</h5>
+                                <p class="card-text">Danh sách những sản phẩm dưỡng tóc chất lượng cao được các stylist chuyên nghiệp tin dùng và khuyên dùng.</p>
+                                <a href="#" class="btn btn-outline-dark btn-sm">Đọc tiếp</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-4">
+                        <div class="card blog-card h-100">
+                            <div class="position-relative">
+                                <svg class="bd-placeholder-img card-img-top blog-img" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mẹo hay" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                    <title>Mẹo hay</title>
+                                    <rect width="100%" height="100%" fill="#0dcaf0"/>
+                                    <text x="50%" y="50%" fill="#000" dominant-baseline="middle" text-anchor="middle">Mẹo hay chăm sóc tóc</text>
+                                </svg>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="blog-tag"><i class="bi bi-tag"></i> Mẹo hay</span>
+                                    <span class="blog-date"><i class="bi bi-calendar3"></i> 25/01/2025</span>
+                                </div>
+                                <h5 class="card-title">5 Mẹo phục hồi tóc hư tổn nhanh chóng</h5>
+                                <p class="card-text">Những bí quyết đơn giản giúp cải thiện tình trạng tóc hư tổn, khô xơ sau khi nhuộm hoặc uốn quá nhiều.</p>
+                                <a href="#" class="btn btn-outline-dark btn-sm">Đọc tiếp</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phân trang -->
+                <nav class="mt-5">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item"><a class="page-link" href="#">Trước</a></li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Sau</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="col-lg-4">
+                <!-- Sidebar -->
+                <div class="sidebar">
+                    <!-- Bài viết nổi bật -->
+                    <div class="popular-posts mb-4">
+                        <h4 class="mb-3">Bài viết nổi bật</h4>
+                        <div class="popular-post-item">
+                            <h6><a href="#" class="text-decoration-none text-dark">5 Lỗi phổ biến khi tự cắt tóc tại nhà</a></h6>
+                            <span class="blog-date"><i class="bi bi-calendar3"></i> 20/01/2025</span>
+                        </div>
+                        <div class="popular-post-item">
+                            <h6><a href="#" class="text-decoration-none text-dark">Cách chọn kiểu tóc phù hợp với khuôn mặt</a></h6>
+                            <span class="blog-date"><i class="bi bi-calendar3"></i> 15/01/2025</span>
+                        </div>
+                        <div class="popular-post-item">
+                            <h6><a href="#" class="text-decoration-none text-dark">Bí quyết giữ màu tóc nhuộm lâu phai</a></h6>
+                            <span class="blog-date"><i class="bi bi-calendar3"></i> 10/01/2025</span>
+                        </div>
+                        <div class="popular-post-item">
+                            <h6><a href="#" class="text-decoration-none text-dark">Cách khắc phục tóc bị cháy sau khi tẩy</a></h6>
+                            <span class="blog-date"><i class="bi bi-calendar3"></i> 05/01/2025</span>
+                        </div>
+                    </div>
+
+                    <!-- Danh mục -->
+                    <div class="popular-posts mb-4">
+                        <h4 class="mb-3">Danh mục</h4>
+                        <ul class="categories-list">
+                            <li><a href="#" class="text-dark text-decoration-none">Kiểu tóc nam (15)</a></li>
+                            <li><a href="#" class="text-dark text-decoration-none">Kiểu tóc nữ (23)</a></li>
+                            <li><a href="#" class="text-dark text-decoration-none">Chăm sóc tóc (18)</a></li>
+                            <li><a href="#" class="text-dark text-decoration-none">Màu tóc (12)</a></li>
+                            <li><a href="#" class="text-dark text-decoration-none">Mẹo hay (9)</a></li>
+                            <li><a href="#" class="text-dark text-decoration-none">Sản phẩm (7)</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Đăng ký nhận tin -->
+                    <div class="popular-posts mb-4">
+                        <h4 class="mb-3">Đăng ký nhận tin</h4>
+                        <p>Nhận thông tin về xu hướng tóc mới nhất và khuyến mãi từ salon.</p>
+                        <form>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="Địa chỉ email của bạn" required>
+                            </div>
+                            <button type="submit" class="btn btn-dark w-100">Đăng ký</button>
+                        </form>
+                    </div>
+
+                    <!-- Thẻ tag -->
+                    <div class="popular-posts">
+                        <h4 class="mb-3">Thẻ tag</h4>
+                        <div>
+                            <a href="#" class="btn btn-sm btn-outline-secondary m-1">Kiểu tóc nam</a>
+                            <a href="#" class="btn btn-sm btn-outline-secondary m-1">Kiểu tóc nữ</a>
+                            <a href="#" class="btn btn-sm btn-outline-secondary m-1">Tóc ngắn</a>
+                            <a href="#" class="btn btn-sm btn-outline-secondary m-1">Tóc dài</a>
+                            <a href="#" class="btn btn-sm btn-outline-secondary m-1">Undercut</a>
+                            <a href="#" class="btn btn-sm btn-outline-secondary m-1">Màu tóc</a>
+                            <a href="#" class="btn btn-sm btn-outline-secondary m-1">Tóc uốn</a>
+                            <a href="#" class="btn btn-sm btn-outline-secondary m-1">Tóc duỗi</a>
+                            <a href="#" class="btn btn-sm btn-outline-secondary m-1">Mẹo hay</a>
+                            <a href="#" class="btn btn-sm btn-outline-secondary m-1">Dầu gội</a>
+                            <a href="#" class="btn btn-sm btn-outline-secondary m-1">Dầu xả</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="bg-light py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h3>Đặt lịch ngay hôm nay</h3>
+                    <p class="mb-md-0">Trải nghiệm dịch vụ cắt tóc chuyên nghiệp với đội ngũ stylist hàng đầu của chúng tôi.</p>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <a href="booking.html" class="btn btn-dark btn-lg">Đặt lịch ngay</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5>Salon HTL</h5>
+                    <p>Nơi mang đến cho bạn những kiểu tóc hiện đại và phong cách.</p>
+                    <div class="d-flex mt-3">
+                        <a href="https://www.facebook.com/luong.ho.191004/" class="text-white me-3"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="https://www.facebook.com/huy.teo.295714" class="text-white me-3"><i class="bi bi-facebook fs-5"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5>Liên hệ</h5>
+                    <p><i class="bi bi-geo-alt"></i> 470 Đường Trần Đại Nghĩa, Phường Hòa Quý, Quận Ngũ Hành Sơn, TP Đà Nẵng</p>
+                    <p><i class="bi bi-telephone"></i> 028 1234 5678</p>
+                    <p><i class="bi bi-envelope"></i> huyteo1003@gmail.com</p>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Giờ mở cửa</h5>
+                    <p>Thứ Hai - Thứ Sáu: 9:00 - 21:00</p>
+                    <p>Thứ Bảy - Chủ Nhật: 8:00 - 22:00</p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2025 Salon Cắt Tóc. Tất cả quyền được bảo lưu.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-white text-decoration-none me-3">Chính sách bảo mật</a>
+                    <a href="#" class="text-white text-decoration-none">Điều khoản sử dụng</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

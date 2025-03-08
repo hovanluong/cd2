@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon HTL</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.37), rgba(0, 0, 0, 0.7)), url('images/salon.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+        }
+        
+        .service-card {
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .gallery-img {
+            height: 250px;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+        
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+        
+        .testimonial {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info i {
+            font-size: 24px;
+            margin-right: 10px;
+            color: #212529;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 40px;
+        }
+        
+        .section-title:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 50px;
+            height: 3px;
+            background-color: #212529;
+        }
+        
+        .btn-booking {
+            background-color: #212529;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            transition: all 0.3s;
+        }
+        
+        .btn-booking:hover {
+            background-color: #000;
+            transform: scale(1.05); 
+            color: white;
+        }
+        
+        .opening-hours {
+            background-color: #212529;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        
+        .promotion-banner {
+            background-color: #dc3545;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-cut me-2"></i>Salon HTL</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Giới thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Giá dịch vụ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="booking.html">Đặt lịch hẹn</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 mb-4">Nâng Tầm Phong Cách</h1>
+            <p class="lead mb-5">Chúng tôi mang đến những kiểu tóc thời thượng và chuyên nghiệp nhất</p>
+        </div>
+    </section>
+
+    <!-- Promotion Banner -->
+    <div class="container mt-5">
+        <div class="promotion-banner text-center">
+            <h4 class="mb-0">Khuyến mãi đặc biệt: Giảm 20% cho khách hàng mới đến hết 30/03/2025</h4>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title">Dịch Vụ Của Chúng Tôi</h2>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="card service-card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-cut fa-3x mb-3"></i>
+                            <h4 class="card-title">Cắt Tóc Nam</h4>
+                            <p class="card-text">Cắt tóc chuyên nghiệp với các kiểu tóc thời thượng, phù hợp với khuôn mặt.</p>
+                            <p class="fw-bold">Từ 100.000đ</p>
+                            <a href="pricing.html" class="btn btn-outline-dark">Chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card service-card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-spa fa-3x mb-3"></i>
+                            <h4 class="card-title">Dịch Vụ Tạo Kiểu</h4>
+                            <p class="card-text">Uốn, duỗi, nhuộm với sản phẩm chất lượng cao, không gây hại tóc.</p>
+                            <p class="fw-bold">Từ 350.000đ</p>
+                            <a href="pricing.html" class="btn btn-outline-dark">Chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card service-card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-pump-soap fa-3x mb-3"></i>
+                            <h4 class="card-title">Chăm Sóc Da Đầu</h4>
+                            <p class="card-text">Gội đầu dưỡng sinh, massage thư giãn với tinh dầu thiên nhiên.</p>
+                            <p class="fw-bold">Từ 150.000đ</p>
+                            <a href="pricing.html" class="btn btn-outline-dark">Chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Bộ Sưu Tập Kiểu Tóc</h2>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <img src="images/undercut.jpg" alt="Kiểu tóc undercut" class="img-fluid rounded mb-3">
+                </div>
+                <div class="col-md-4">
+                    <img src="images/mohican.jpg" alt="Kiểu tóc mohican" class="img-fluid rounded mb-3">
+                </div>
+                <div class="col-md-4">
+                    <img src="images/pompa.jpg" alt="Kiểu tóc pompadour" class="img-fluid rounded mb-3">
+                </div>
+                <div class="col-md-4">
+                    <img src="images/layern.jpg" alt="Kiểu tóc layer nữ" class="img-fluid rounded mb-3">
+                </div>
+                <div class="col-md-4">
+                    <img src="images/bob.jpg" alt="Kiểu tóc bob" class="img-fluid rounded mb-3">
+                </div>
+                <div class="col-md-4">
+                    <img src="images/xoans.jpg" alt="Tóc xoăn sóng" class="img-fluid rounded mb-3">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Team Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title">Đội Ngũ Thợ Cắt Tóc</h2>
+            <div class="row mt-4 text-center">
+                <div class="col-md-3 team-member">
+                    <img src="images/an.jpg" alt="Nguyễn Văn An" class="rounded-circle" width="150" height="150">
+                    <h5>Nguyễn Văn An</h5>
+                    <p>Giám đốc kỹ thuật</p>
+                    <p>15 năm kinh nghiệm</p>
+                </div>
+                <div class="col-md-3 team-member">
+                    <img src="images/binh.jpg" alt="Trần Thị Bình" class="rounded-circle" width="150" height="150">
+                    <h5>Trần Thị Bình</h5>
+                    <p>Chuyên gia tạo kiểu</p>
+                    <p>10 năm kinh nghiệm</p>
+                </div>
+                <div class="col-md-3 team-member">
+                    <img src="images/cuong.jpg" alt="Lê Minh Cường" class="rounded-circle" width="150" height="150">
+                    <h5>Lê Minh Cường</h5>
+                    <p>Thợ cắt tóc nam</p>
+                    <p>8 năm kinh nghiệm</p>
+                </div>
+                <div class="col-md-3 team-member">
+                    <img src="images/dung.jpg" alt="Phạm Thị Dung" class="rounded-circle" width="150" height="150">
+                    <h5>Phạm Thị Dung</h5>
+                    <p>Chuyên gia màu sắc</p>
+                    <p>7 năm kinh nghiệm</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Testimonials Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Khách Hàng Nói Gì Về Chúng Tôi</h2>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="testimonial">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="images/hteo.jpg" alt="Hà Khắc Huy" class="rounded-circle" width="50" height="50" style="margin-right: 15px;">
+                            <div>
+                                <h5 class="mb-0">Hà Khắc Huy</h5>
+                                <small class="text-muted">Khách hàng thường xuyên</small>
+                            </div>
+                        </div>
+                        <p>"Dịch vụ tuyệt vời, thợ cắt tóc chuyên nghiệp và rất hiểu ý tôi. Tôi đã và sẽ tiếp tục là khách hàng thân thiết ở đây."</p>
+                        <div class="text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="images/luong.jpg" alt="Hồ Văn Lương" class="rounded-circle" width="50" height="50" style="margin-right: 15px;">
+                            <div>
+                                <h5 class="mb-0">Hồ Văn Lương</h5>
+                                <small class="text-muted">Khách hàng mới</small>
+                            </div>
+                        </div>
+                        <p>"Lần đầu tiên đến salon và tôi thực sự hài lòng với kiểu tóc mới. Không gian salon sạch sẽ, nhân viên thân thiện."</p>
+                        <div class="text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="images/huy.jpg" alt="Quang Huy" class="rounded-circle" width="50" height="50" style="margin-right: 15px;">
+                            <div>
+                                <h5 class="mb-0">Quang Huy</h5>
+                                <small class="text-muted">Khách VIP</small>
+                            </div>
+                        </div>
+                        <p>"5 năm sử dụng dịch vụ và chưa bao giờ thất vọng. Đội ngũ nhân viên luôn cập nhật xu hướng tóc mới và tư vấn tận tâm."</p>
+                        <div class="text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Information Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="section-title">Thông Tin Liên Hệ</h2>
+                    <div class="contact-info mt-4">
+                        <p><i class="fas fa-map-marker-alt"></i> 470 Trần Đại Nghĩa, Phường Hòa Quý, Quận Ngũ Hành Sơn, TP. Đà Nẵng</p>
+                        <p><i class="fas fa-phone"></i> 0123-456-789</p>
+                        <p><i class="fas fa-envelope"></i> huyteo1003@gmail.comcom</p>
+                        <div class="mt-4">
+                            <a href="https://www.facebook.com/luong.ho.191004/" class="me-3"><i class="fab fa-facebook fa-2x"></i></a>
+                            <a href="https://www.facebook.com/huy.teo.295714/" class="me-3"><i class="fab fa-facebook fa-2x"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="opening-hours">
+                        <h2 class="mb-4">Giờ Mở Cửa</h2>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Thứ Hai - Thứ Sáu:</span>
+                            <span>8:00 - 21:00</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Thứ Bảy - Chủ Nhật:</span>
+                            <span>7:00 - 22:00</span>
+                        </div>
+                        <p class="mb-0">* Vui lòng đặt lịch trước để được phục vụ tốt nhất</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-dark text-white text-center">
+        <div class="container">
+            <h2 class="mb-4">Sẵn sàng cho một diện mạo mới?</h2>
+            <p class="lead mb-4">Đặt lịch ngay hôm nay và nhận được ưu đãi đặc biệt dành cho khách hàng mới</p>
+            <a href="booking.html" class="btn btn-light btn-lg">Đặt Lịch Ngay</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 Salon Cắt Tóc HTL. Liên hệ: 0123-456-789</p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
